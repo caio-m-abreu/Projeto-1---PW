@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
+
+:root{
+    --cor-de-fundo: #F6F5AE;
+    --preto-texto: #000000;
+    --vermelho: #92140C;
+    --laranja-box: #BE5A38;
+    --branco-texto: #FFFFFF;
+    --fonte-titulo: "Wix Madefor Display", sans-serif;
+    --fonte-texto: "Wix Madefor Text", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--cor-de-fundo);
+}
+
+.cabecalho{
+    background-color: var(--laranja-box);
+    height: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabecalho__menu{
+    width: 5em;
+    height: 5em;
+    cursor: pointer;
+}
+.cabecalho__logo{
+    width: 8em;
+    height: 8em;
+    margin: 0 31.05em;
+    cursor: pointer;
+}
+.cabecalho__login{
+    width: 5em;
+    height: 5em;
+    cursor: pointer;
+}

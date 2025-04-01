@@ -41,3 +41,37 @@ body{
     height: 5em;
     cursor: pointer;
 }
+
+.principal{
+    display: flex;
+}
+.principal__container{
+    padding: 2.5em;
+}
+.principal__caranguejo{
+    height: 48em;
+    width: 37em;
+}
+.container__titulo{
+    color: var(--preto-texto);
+    font-size: 4em;
+    font-family: var(--fonte-titulo);
+}
+.container__texto{
+    color: var(--preto-texto);
+    font-size: 1.5em;
+    font-family: var(--fonte-texto);
+    margin: 2.5em 0;
+}
+.container__button{
+    background-color: var(--cor-de-fundo);
+    color: var(--preto-texto);
+    text-decoration: none;
+    border: var(--preto-texto) 1px solid;
+    border-radius: 62em;
+    padding: 1em;
+    display: block;
+    font-family: var(--fonte-texto);
+    width: 10.75em;
+    text-align: center;
+}

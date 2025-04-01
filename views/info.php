@@ -1,1 +1,1 @@
-<h2>Informação</h2>
+<h2>INFO</h2>

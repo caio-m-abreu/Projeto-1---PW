@@ -1,1 +1,1 @@
-<h2>Lula preso</h2>
+<h2>RECEITAS</h2>

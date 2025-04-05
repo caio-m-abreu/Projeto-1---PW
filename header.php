@@ -8,7 +8,9 @@
     </head>
     <body>
         <header class="cabecalho">
-            <a href=""><img src="./src\img\Menu.svg" alt="menu" class="cabecalho__menu"></a>
+            <a href="?bbb=contatos"><img src="./src\img\Menu.svg" alt="menu" class="cabecalho__menu"></a>
+
             <a href="?bbb=home"><img src="./src\img\Logo-Panela-Ponto 1.svg" alt="Logo do Site" class="cabecalho__logo"></a>
+
             <a href="?bbb=cadastrar"><img src="./src\img\Icon-Login.svg" alt="Ícone do Login" class="cabecalho__login"></a>
         </header>

@@ -3,7 +3,7 @@
         <h2 class="cadastro__titulo">Cadastrar</h2>
         <form action="#" method="POST" class="cadastro__form">
             
-            <label for="nome" class="cadastro__label">Nome</label>
+            <label for="nome" class="cadastro__label__margin cadastro__label">Nome</label>
             <input type="text" class="cadastro__input" id="nome" name="nome" placeholder="Nome" required>
             
             <label for="email" class="cadastro__label">E-mail</label>

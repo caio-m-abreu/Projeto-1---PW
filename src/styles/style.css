@@ -93,13 +93,13 @@ body{
     font-size: 2.8em;
     font-family: var(--fonte-titulo);
 }
-
 .cadastro__label{
     color: var(--branco-texto);
     font-size: 1.5em;
     font-family: var(--fonte-titulo);
     margin: 2em 0;
     display: block;
+    margin-bottom: 1em;
 }
 .cadastro__input{
     width: 50%;
@@ -127,4 +127,54 @@ body{
 .cadastro__descricao a{
     text-decoration: none;
     color: var(--vermelho);
+}
+.sobre{
+    display: flex;
+}
+.sobre__container{
+    padding: 3.5em 1.6em;
+}
+.sobre__titulo{
+    color: var(--preto-texto);
+    font-size: 4em;
+    font-family: var(--fonte-titulo);
+    margin-bottom: 0.5em;
+}
+.sobre__texto{
+    color: var(--preto-texto);
+    font-size: 1.5em;
+    font-family: var(--fonte-texto);
+    margin-bottom: 1em;
+}
+
+.contatos{
+    text-align: center;
+    padding: 6.5em 0;
+}
+.contatos__texto{
+    color: var(--preto-texto);
+    font-size: 1.5em;
+    font-family: var(--fonte-texto);
+    margin-top: 2em;
+}
+.contatos__linha{
+    margin: 2em 0;
+}
+.contatos__redes{
+    display: inline-flex;
+    list-style: none;
+    align-items: center;
+    margin-top: 2em;
+    gap: 2em;
+}
+.rodape{
+    background-color: var(--laranja-box);
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rodape__texto{
+    color: var(--branco-texto);
+    font-family: var(--fonte-texto);
 }

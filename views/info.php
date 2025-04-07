@@ -7,7 +7,5 @@
         <p class="sobre__texto">
         Junte-se a nós nessa jornada deliciosa e descubra como a cozinha pode ser um espaço de aprendizado, diversão e descobertas. Afinal, mais do que receitas, queremos proporcionar experiências que encantam e inspiram.</p>
     </div>
-    <div class="sobre__imagem">
-        <img src="src\img\ImgSobre.png" class="" alt="Imagem de Maria e Lara cozinhando juntas">
-    </div>
+    <img src="src\img\ImgSobre.png" alt="Imagem de Maria e Lara cozinhando juntas">
 </section>

@@ -22,7 +22,7 @@
             <a href="https://www.youtube.com/@criascript" target="_blank"><img src="src\img\Youtube.svg" alt="Logo Youtube"></a>
         </li>
         <li class="redes__link">
-            <a href="https://www.facebook.com/MaiconKuster" target="_blank"><img src="src\img\Facebook.svg" alt="Logo Facebook"></a>
+            <a href="https://www.facebook.com/minello.roberto" target="_blank"><img src="src\img\Facebook.svg" alt="Logo Facebook"></a>
         </li>
     </ul>
 </section>

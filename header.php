@@ -1,3 +1,4 @@
+<?php if (session_status() === PHP_SESSION_NONE) session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
@@ -19,12 +20,27 @@
             </a>
 
             <div class="user-dropdown">
-                <img src="src/img/Icon-Login.svg" id="btn-user" alt="Ícone de Usuário">
-
-                <ul id="menu-user" class="dropdown-menu">
-                    <li><a href="?bbb=login">Entrar</a></li>
-                    <li><a href="?bbb=cadastrar">Cadastrar</a></li>
-                </ul>
+                <?php
+                if (isset($_SESSION["usuario"])) {
+                    $foto = $_SESSION["usuario"]["foto"] ?? 'assets/img/default-user.png';
+                    $nome = $_SESSION["usuario"]["nome"];
+                    echo "<img src='$foto' id='btn-user' alt='Foto do usuário' class='usuario-logado' title='$nome'>";
+                    echo "
+                        <ul id='menu-user' class='dropdown-menu'>
+                            <li><a href='?bbb=perfil'>Perfil</a></li>
+                            <li><a href='controllers\logout.php'>Sair</a></li>
+                        </ul>
+                    ";
+                } else {
+                    echo '<img src="src/img/Icon-Login.svg" id="btn-user" alt="Ícone de Usuário">';
+                    echo '
+                        <ul id="menu-user" class="dropdown-menu">
+                            <li><a href="?bbb=login">Entrar</a></li>
+                            <li><a href="?bbb=cadastrar">Cadastrar</a></li>
+                        </ul>
+                    ';
+                }
+                ?>
             </div>
         </header>
 

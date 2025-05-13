@@ -1,7 +1,7 @@
 <section class="cadastro">
     <div class="cadastro__container">
         <h2 class="cadastro__titulo">Entrar</h2>
-        <form action="#" method="POST" class="cadastro__form">
+        <form action="controllers/controller_login.php" method="POST" class="cadastro__form">
             <label for="email" class="cadastro__label">E-mail</label>
             <input type="email" class="cadastro__input" id="email" name="email" placeholder="E-mail" required>
             

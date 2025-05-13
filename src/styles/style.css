@@ -86,7 +86,11 @@ body{
     display: inline-block;
     cursor: pointer;
 }
-
+.usuario-logado{
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+}
 .dropdown-menu {
     position: absolute;
     right: 0;
@@ -100,7 +104,11 @@ body{
     z-index: 1000;
     width: 8em;
 }
-  
+
+.dropdown-menu.ativo {
+    display: block;
+}
+
 .dropdown-menu li a {
     display: block;
     padding: 0.5em 1em;

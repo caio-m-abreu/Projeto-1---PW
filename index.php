@@ -12,6 +12,7 @@ switch ($pagina) {
     case 'receitas': include 'views/recipes.php'; break;
     case 'login': include 'views/login.php'; break;
     case 'cadastrar': include 'views/cadastrar.php'; break;
+    case 'perfil': include 'views/perfil.php'; break;
     default: include 'views/home.php'; break;
 }
 

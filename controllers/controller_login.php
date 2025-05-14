@@ -7,37 +7,26 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $senha = $_POST["senha"] ?? '';
 
     if ($email && $senha) {
-        // Busca o usuário no banco pelo email
-        $sql = "SELECT id, nome, email, senha FROM usuarios WHERE email = ?";
+        $sql = "SELECT id, nome, email, senha, foto FROM usuarios WHERE email = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("s", $email);
         $stmt->execute();
+        $result = $stmt->get_result();
+        $usuario = $result->fetch_assoc();
 
-        $resultado = $stmt->get_result();
+        if ($usuario && password_verify($senha, $usuario["senha"])) {
+            // Cria sessão com a foto correta
+            $_SESSION["usuario"] = [
+                "id" => $usuario["id"],
+                "nome" => $usuario["nome"],
+                "email" => $usuario["email"],
+                "foto" => $usuario["foto"] ?? "src/img/tung.jpg" // fallback se estiver null
+            ];
 
-        if ($resultado->num_rows === 1) {
-            $usuario = $resultado->fetch_assoc();
-
-            // Verifica a senha
-            if (password_verify($senha, $usuario['senha'])) {
-                // Define imagem padrão para todos (você pode salvar no banco depois)
-                $foto_padrao = 'src/img/tung.jpg';
-
-                // Cria sessão
-                $_SESSION['usuario'] = [
-                    'id' => $usuario['id'],
-                    'nome' => $usuario['nome'],
-                    'email' => $usuario['email'],
-                    'foto' => $foto_padrao
-                ];
-
-                header("Location: ../index.php?bbb=home");
-                exit();
-            } else {
-                echo "Senha incorreta!";
-            }
+            header("Location: ../index.php?bbb=home");
+            exit();
         } else {
-            echo "E-mail não encontrado!";
+            echo "⚠ E-mail ou senha incorretos!";
         }
 
         $stmt->close();

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 13/05/2025 às 16:08
--- Versão do servidor: 10.4.28-MariaDB
--- Versão do PHP: 8.2.4
+-- Tempo de geração: 14/05/2025 às 22:38
+-- Versão do servidor: 10.4.32-MariaDB
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,18 +31,17 @@ CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `senha` varchar(255) NOT NULL
+  `senha` varchar(255) NOT NULL,
+  `foto` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`) VALUES
-(1, 'Caio Moraes', 'caio2309abreu@gmail.com', '$2y$10$Qw9TfZGvv/a.aPfEJk6ELuI54vtHl0Vf8TR.TAzQXhVVU1FVCtskG'),
-(4, 'Caio Moraes', 'teste@gmail.com', '$2y$10$HWdvu4UIl.ruynmvPsfMPe1m1gVlwK7FuvyY09v7paMZtglUtMrHe'),
-(5, 'Felipao', 'felipao@gmail.com', '$2y$10$oIjqyKa5.IjOQ8MNIGlZPOIAh0.u30kalNp2v5cwfGlQt8Zo1fNha'),
-(6, 'Alan Patrick', 'amorcomigo@gmail.com', '$2y$10$0VY7qxLbD/3BE1jNRSrCfeBuALBTkl7z0lf5nBBLiQeqxfVHZWyCK');
+INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `foto`) VALUES
+(7, 'Caio', 'caio2309abreu@gmail.com', '$2y$10$yokjo2XOp9QguHi0vLfXu.ZtdYp3Euv7OFz4wbWos0dPSqW5gD/Um', 'src/img/uploads/6824fd0b812f3.jpg'),
+(8, 'Paulo Freire', 'caioabreu2318@gmail.com', '$2y$10$EP7x3iGUqYvKIyp.NhKegeNSFwQP/WpT2oeMFn0erymxFFkftkMk2', 'src/img/uploads/6824fd705f417.png');
 
 --
 -- Índices para tabelas despejadas
@@ -63,7 +62,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

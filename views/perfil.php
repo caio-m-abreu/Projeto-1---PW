@@ -11,7 +11,7 @@ $usuario = $_SESSION['usuario'];
 
         <form action="controllers/controller_perfil.php" method="POST" enctype="multipart/form-data">
             <div class="perfil__foto">
-                <img src="<?= $usuario['foto'] ?>" alt="Foto de perfil" width="120" height="120">
+                <img src="<?= htmlspecialchars($usuario['foto']) ?>" alt="Foto de perfil" width="120" height="120">
                 <input type="file" name="foto">
             </div>
 
@@ -22,7 +22,7 @@ $usuario = $_SESSION['usuario'];
             <input type="email" name="email" value="<?= htmlspecialchars($usuario['email']) ?>" required>
 
             <label>Nova Senha</label>
-            <input type="password" name="senha">
+            <input type="password" name="nova_senha" placeholder="Deixe em branco para manter a senha atual">
 
             <button type="submit">Salvar alterações</button>
         </form>

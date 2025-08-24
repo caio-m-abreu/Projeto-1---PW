@@ -1,0 +1,51 @@
+.form-receita{
+    text-align: center;
+    min-height: 100vh;
+    padding: 2em;
+}
+.form-receita h2{
+    font-family: var(--fonte-titulo);
+    font-size: 4em;
+    color: var(--preto-texto);
+    margin: 0.5em;
+}
+.linha-receita{
+    margin-bottom: 0.5em;
+}
+.label-receita{
+    display: block;
+    margin: 0.5em;
+    font-family: var(--fonte-titulo);
+    font-size: 1.5em;
+    color: var(--preto-texto);
+    font-weight: bold;
+}
+.form-receita textarea,
+.form-receita input{
+    width: 50%;
+    height: 3em;
+    box-sizing: border-box;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: var(--fonte-texto);
+}
+textarea{
+    resize: none;
+}
+.form-receita button{
+    font-family: var(--fonte-titulo);
+    color: var(--branco-texto);
+    background-color: var(--laranja-box);
+    border: none;
+    border-radius: 0.5em;
+    font-size: 1.5em;
+    padding: 0.5em;
+    cursor: pointer;
+    margin-top: 0.5em;
+}
+.form-receita button:hover{
+    background-color: var(--vermelho);
+}

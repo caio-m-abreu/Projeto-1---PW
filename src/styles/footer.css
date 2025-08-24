@@ -1,0 +1,11 @@
+.rodape{
+    background-color: var(--laranja-box);
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rodape__texto{
+    color: var(--branco-texto);
+    font-family: var(--fonte-texto);
+}

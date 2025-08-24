@@ -1,0 +1,54 @@
+.cadastro{
+    padding: 4.3em 20.5em;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.cadastro__container{
+    background-color: var(--laranja-box);
+    text-align: center;
+    padding: 2em 0;
+    border: none;
+    border-radius: 1em;
+}
+.cadastro__titulo{
+    color: var(--branco-texto);
+    font-size: 2.8em;
+    font-family: var(--fonte-titulo);
+}
+.cadastro__label{
+    color: var(--branco-texto);
+    font-size: 1.5em;
+    font-family: var(--fonte-titulo);
+    margin: 2em 0;
+    display: block;
+    margin-bottom: 1em;
+}
+.cadastro__input{
+    width: 50%;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 0.25em;
+    font-family: var(--fonte-texto);
+}
+.cadastro__button{
+    width: 50%;
+    padding: 1em;
+    margin: 4em 0;
+    font-family: var(--fonte-titulo);
+    background: var(--vermelho);
+    color: var(--branco-texto);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cadastro__descricao{
+    color: var(--branco-texto);
+    font-family: var(--fonte-texto);
+}
+
+.cadastro__descricao a{
+    text-decoration: none;
+    color: var(--vermelho);
+}

@@ -4,7 +4,7 @@
         Receitas fáceis, deliciosas e práticas para o dia a dia. Com dicas simples e ingredientes acessíveis, cozinhar fica mais leve e gostoso!
     </p>
 
-    <img src="src\img\Linha-menu.svg" class="contatos__linha" alt="linha">
+    <img src="src/img/Linha-menu.svg" class="contatos__linha" alt="linha">
 
     <h2 class="container__titulo">Contatos</h2>
     <p class="contatos__texto">E-mail: PanelaePonto@gmail.com</p>

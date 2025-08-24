@@ -1,0 +1,20 @@
+.contatos{
+    text-align: center;
+    padding: 6.5em 0;
+}
+.contatos__texto{
+    color: var(--preto-texto);
+    font-size: 1.5em;
+    font-family: var(--fonte-texto);
+    margin-top: 2em;
+}
+.contatos__linha{
+    margin: 2em 0;
+}
+.contatos__redes{
+    display: inline-flex;
+    list-style: none;
+    align-items: center;
+    margin-top: 2em;
+    gap: 2em;
+}

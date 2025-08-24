@@ -1,0 +1,106 @@
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--laranja-box);
+    height: 8em;
+    padding:0 2em;
+}
+
+.cabecalho__menu,
+.cabecalho__logo,
+.cabecalho__login{
+    width: 5em;
+    height: 5em;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.cabecalho__menu img,
+.cabecalho__login img {
+  height: 100%;
+}
+/* Menu lateral */
+#menu-lateral {
+    position: fixed;
+    top: 0;
+    left: -13.75em;
+    width: 12.5em;
+    height: 100%;
+    background-color: var(--cor-de-fundo);
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    padding-top: 3.5em;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+#menu-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+#menu-lateral li {
+    padding: 1em 1.5em;
+}
+
+#menu-lateral li a {
+    text-decoration: none;
+    color: var(--preto-texto);
+    font-family: var(--fonte-titulo);
+    font-weight: bold;
+    display: block;
+    transition: background 0.3s;
+}
+#menu-lateral li a:hover {
+    color: var(--laranja-box);
+}
+/* Quando o menu estiver aberto */
+#menu-lateral.aberto {
+    left: 0;
+  }
+
+  /*Drop-Down*/
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.usuario-logado{
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+}
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 2.5em;
+    background-color: var(--cor-de-fundo);
+    list-style: none;
+    padding: 0.5em 0;
+    margin: 0;
+    display: none;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+    width: 8em;
+}
+
+.dropdown-menu.ativo {
+    display: block;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 0.5em 1em;
+    color: var(--preto-texto);
+    font-family: var(--fonte-titulo);
+    font-weight: bold;
+    text-decoration: none;
+}
+  
+.dropdown-menu li a:hover {
+    color: var(--laranja-box);
+}
+.dropdown-menu.ativo {
+    display: block;
+}

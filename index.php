@@ -13,6 +13,7 @@ switch ($pagina) {
     case 'login': include 'views/login.php'; break;
     case 'cadastrar': include 'views/cadastrar.php'; break;
     case 'perfil': include 'views/perfil.php'; break;
+    case 'mensagem': include 'views/message.php'; break;
     default: include 'views/home.php'; break;
 }
 

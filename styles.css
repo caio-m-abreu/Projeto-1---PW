@@ -1,0 +1,32 @@
+@import url("src/styles/header.css");
+@import url("src/styles/home.css");
+@import url("src/styles/register.css");
+@import url("src/styles/message.css");
+@import url("src/styles/perfil.css");
+@import url("src/styles/register_recipes.css");
+@import url("src/styles/info.css");
+@import url("src/styles/contacts.css");
+@import url("src/styles/footer.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-de-fundo: #F6F5AE;
+    --preto-texto: #000000;
+    --vermelho: #92140C;
+    --laranja-box: #BE5A38;
+    --branco-texto: #FFFFFF;
+    --fonte-titulo: "Wix Madefor Display", sans-serif;
+    --fonte-texto: "Wix Madefor Text", sans-serif;
+}
+body{
+    background-color: var(--cor-de-fundo);
+}
+
+

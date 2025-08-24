@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ];
 
             // Redireciona para a home
-            header("Location: ../index.php?bbb=home");
+            header("Location: ../index.php?bbb=mensagem");
             exit();
         } else {
             echo "Erro ao cadastrar: " . $stmt->error;

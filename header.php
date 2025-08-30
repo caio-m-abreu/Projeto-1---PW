@@ -50,6 +50,7 @@
             <li><a href="?bbb=home">Home</a></li>
             <li><a href="?bbb=sobre">Sobre</a></li>
             <li><a href="?bbb=receitas">Cadastrar Receita</a></li>
+            <li><a href="?bbb=suasreceitas">Suas Receitas</a></li>
             <li><a href="?bbb=contatos">Contatos</a></li>
         </ul>
     </nav>

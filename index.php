@@ -14,6 +14,7 @@ switch ($pagina) {
     case 'cadastrar': include 'views/cadastrar.php'; break;
     case 'perfil': include 'views/perfil.php'; break;
     case 'mensagem': include 'views/message.php'; break;
+    case 'suasreceitas': include 'views/listar_recipes.php'; break;
     default: include 'views/home.php'; break;
 }
 

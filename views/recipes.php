@@ -1,5 +1,5 @@
 <section class="receitas-cadastro">
-    <form action="#" method="POST" class="form-receita">
+    <form action="controllers\controller_recipes.php" method="POST" class="form-receita">
         <h2>Cadastrar Receita</h2>
         <img src="src\img\Linha-menu.svg" alt="linha" class="linha-receita">
         <label for="nome_receita" class="label-receita">Nome da Receita:</label>
@@ -25,15 +25,15 @@
         <div class="etapas-receita">
             <div>
                 <label for="etapa1" class="label-receita">Etapa 1:</label>
-                <textarea id="utensilios" name="utensilios" required></textarea>
+                <textarea id="etapa1" name="etapa1" required></textarea>
             </div>
             <div>
                 <label for="etapa2" class="label-receita">Etapa 2:</label>
-                <textarea id="utensilios" name="utensilios" required></textarea>
+                <textarea id="etapa2" name="etapa2" required></textarea>
             </div>
             <div>
                 <label for="etapa3" class="label-receita">Etapa 3:</label>
-                <textarea id="utensilios" name="utensilios" required></textarea>
+                <textarea id="etapa3" name="etapa3" required></textarea>
             </div>
         </div>
 

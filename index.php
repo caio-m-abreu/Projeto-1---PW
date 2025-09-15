@@ -15,6 +15,9 @@ switch ($pagina) {
     case 'perfil': include 'views/perfil.php'; break;
     case 'mensagem': include 'views/message.php'; break;
     case 'suasreceitas': include 'views/listar_recipes.php'; break;
+    case 'ver_receita': include 'views/ver_receita.php'; break;
+    case 'editar_receita': include 'views/editar_receita.php'; break;
+    case 'deletar_receita': include 'controllers/controller_deletar_receita.php'; break;
     default: include 'views/home.php'; break;
 }
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04/09/2025 às 01:13
+-- Tempo de geração: 15/09/2025 às 03:57
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `receitas` (
   `id_receita` int(11) NOT NULL,
+  `usuario_id` int(11) NOT NULL,
   `nome_receita` varchar(64) NOT NULL,
   `descricao` varchar(256) NOT NULL,
   `ingredientes` varchar(256) NOT NULL,
@@ -42,9 +43,9 @@ CREATE TABLE `receitas` (
 -- Despejando dados para a tabela `receitas`
 --
 
-INSERT INTO `receitas` (`id_receita`, `nome_receita`, `descricao`, `ingredientes`, `utensilios`, `etapa1`, `etapa2`, `etapa3`) VALUES
-(1, 'Mr pelado', 'mr', 'mr', 'come ele', '', '', ''),
-(2, 'Mr queimado', 'mr fogo', 'mr, fogo', 'pinto', 'pega o pinto e bota fogo', 'mr queimado', '');
+INSERT INTO `receitas` (`id_receita`, `usuario_id`, `nome_receita`, `descricao`, `ingredientes`, `utensilios`, `etapa1`, `etapa2`, `etapa3`) VALUES
+(1, 7, 'Mr pelado', 'mr', 'mr', 'come ele', '', '', ''),
+(2, 8, 'Mr queimado', 'mr fogo', 'mr, fogo', 'pinto', 'pega o pinto e bota fogo', 'mr queimado', '');
 
 -- --------------------------------------------------------
 
@@ -72,7 +73,8 @@ INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `foto`) VALUES
 (12, 'teste mensagem 3', 'bla@baba', '$2y$10$Pe/DlO2XbU81EwsiS.73vu/8IcXgtsGCVSCzrOvLWqP/6LaQRl4Yi', NULL),
 (13, 'Kely', 'kely@kaka', '$2y$10$ZOAMb.KnEkRU/eG2U./4Iep40fmy2Uzf9tdPv8qi164qt8MmmK/eu', NULL),
 (14, 'Kely', 'bababa@baba', '$2y$10$obIxaNaGMEGDIsIF2cBujet0BROsVS0qKPMnXLxbWwkftpABqIxE.', NULL),
-(15, 'Lucas', 'ga@g', '$2y$10$zNWdnFmKXHgfCNzp7gJWe.kiNqir67fed1tspSVuz.NJ0xOX4R4.K', NULL);
+(15, 'Lucas', 'ga@g', '$2y$10$zNWdnFmKXHgfCNzp7gJWe.kiNqir67fed1tspSVuz.NJ0xOX4R4.K', NULL),
+(16, 'Teste Cad 5', 'lala@lala', '$2y$10$ug0PKOGFIX8xGwCqK2KQNuRVfjqqEx/.jo.TAt/Gjc5KYZ6EgR9H6', NULL);
 
 --
 -- Índices para tabelas despejadas
@@ -82,7 +84,8 @@ INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `foto`) VALUES
 -- Índices de tabela `receitas`
 --
 ALTER TABLE `receitas`
-  ADD PRIMARY KEY (`id_receita`);
+  ADD PRIMARY KEY (`id_receita`),
+  ADD KEY `fk_usuario` (`usuario_id`);
 
 --
 -- Índices de tabela `usuarios`
@@ -99,13 +102,23 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `receitas`
 --
 ALTER TABLE `receitas`
-  MODIFY `id_receita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_receita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- Restrições para tabelas despejadas
+--
+
+--
+-- Restrições para tabelas `receitas`
+--
+ALTER TABLE `receitas`
+  ADD CONSTRAINT `fk_usuario` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
